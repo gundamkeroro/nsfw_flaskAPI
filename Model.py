@@ -78,24 +78,6 @@ def caffe_preprocess_and_compute(pimg, caffe_transformer=None, caffe_net=None,
 def run(filename):
     pycaffe_dir = os.path.dirname(__file__)
 
-    parser = argparse.ArgumentParser()
-    # Required arguments: input file.
-    # parser.add_argument(
-    #     "input_file",
-    #     help="Path to the input image file"
-    # )
-    #
-    # # Optional arguments.
-    # parser.add_argument(
-    #     "--model_def",
-    #     help="Model definition file."
-    # )
-    # parser.add_argument(
-    #     "--pretrained_model",
-    #     help="Trained model weights file."
-    # )
-    #
-    # args = parser.parse_args()
     image_data = open(filename).read()
 
     # Pre-load caffe model.
