@@ -38,7 +38,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 ## Iutput:
 ```
-curl -X POST http://52.80.157.30:9000/nsfw -F file=@path/to/image/image.png 
+curl -X POST http://54.222.201.255:9000/nsfw -F file=@path/to/image/image.png 
 ```
 ## Output:
 ```
