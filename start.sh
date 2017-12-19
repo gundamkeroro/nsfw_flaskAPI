@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 apt update
-pip install flask nginx gunicorn
+apt-get install nginx
+pip install flask gunicorn
 
-git clone git@github.com:gundamkeroro/nsfw_flaskAPI.git
+git clone https://github.com/gundamkeroro/nsfw_flaskAPI.git
 cd nsfw_flaskAPI
 cp open_nsfw /etc/nginx/sites-available/open_nsfw
 sudo ln -s /etc/nginx/sites-available/open_nsfw /etc/nginx/sites-enabled
