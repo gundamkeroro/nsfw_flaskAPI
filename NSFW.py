@@ -20,10 +20,11 @@ def nsfw():
     if file.filename == '':
         return 'No selected file'
     if file:
-        filename = str(uuid.uuid4()) + '.jpg'
-        file.save(os.path.join('/home/ubuntu/open_nsfw/', filename))
+        filename = secure_filename(file.filename)
+        filename = str(uuid.uuid4()) + filename
+        file.save(os.path.join('/workspace/nsfw_flaskAPI/', filename))
         res = Model.run(filename)
-        subprocess.call("rm " + filename, shell=True)        
+        subprocess.call("rm /workspace/nsfw_flaskAPI/" + filename, shell=True)        
         return json.dumps({"probs" : res})
     return 'no such file'
 

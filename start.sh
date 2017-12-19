@@ -2,7 +2,7 @@
 
 apt update
 apt-get install -y nginx
-pip install -y flask gunicorn
+pip install flask gunicorn
 
 git clone https://github.com/gundamkeroro/nsfw_flaskAPI.git
 cd nsfw_flaskAPI
