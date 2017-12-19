@@ -8,10 +8,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 ## check
 ```sudo docker run caffe:cpu caffe --version```
 ## get shell script and flask script
-```git clone https://github.com/gundamkeroro/nsfw_flaskAPI.git```
-```cd nsfw_flaskAPI```
-```chmod +x start.sh```
-```cd ..```
+```
+git clone https://github.com/gundamkeroro/nsfw_flaskAPI.git
+cd nsfw_flaskAPI
+chmod +x start.sh
+cd ..
+```
 ## run docker container
 ```sudo docker run -it -p 9000:5000 -v $PWD/nsfw_flaskAPI:/workspace/nsfw_flaskAPI caffe:cpu /workspace/nsfw_flaskAPI/start.sh ```
 ## should see terminal shows:
